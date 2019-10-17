@@ -1,12 +1,9 @@
 # sash-website-formula
 Site for Sash, and his EP "Not a Formula"
 
-## Setup
+## To Do
 
-1. Copy all the files to a new directory
-2. Go through each file and rename anything that says "React Boilerplate" to your own project name
-3. To generate favicon assets and html, use https://realfavicongenerator.net/
-4. Enter your Google Analytics Tracking ID in `/src/services/ga.js`
+- Setup favicon stuff with https://realfavicongenerator.net/
 
 ## Usage
 
