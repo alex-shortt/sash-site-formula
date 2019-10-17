@@ -1,5 +1,5 @@
-# react-boilerplate
-Boilerplate for new React 16.8 Projects
+# sash-website-formula
+Site for Sash, and his EP "Not a Formula"
 
 ## Setup
 
