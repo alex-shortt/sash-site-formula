@@ -11,6 +11,10 @@ const Container = styled.div`
   z-index: 2;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 `
 
 export default function View(props) {
