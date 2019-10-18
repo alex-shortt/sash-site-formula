@@ -3,13 +3,16 @@ import styled from "styled-components/macro"
 import moment from "moment"
 import "moment-timezone"
 
-import TextBase from "components/Grafitti"
+import GrafittiBase from "components/Grafitti"
 
-const Text = styled(TextBase)`
+const Grafitti = styled(GrafittiBase)`
   font-size: 9rem;
   font-weight: 100;
   text-align: center;
-  margin: 0;
+
+  @media screen and (max-width: 650px) {
+    font-size: 4.3rem;
+  }
 `
 
 const localLaunchDate = moment
@@ -45,5 +48,5 @@ export default function Countdown(props) {
     return <></>
   }
 
-  return <Text>{timeLeft}</Text>
+  return <Grafitti>{timeLeft}</Grafitti>
 }

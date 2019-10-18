@@ -4,7 +4,7 @@ import styled from "styled-components/macro"
 import Helmet from "components/Helmet"
 import Background from "components/Background"
 import Countdown from "components/Countdown"
-import TextBase from "components/Grafitti"
+import GrafittiBase from "components/Grafitti"
 
 const Container = styled.div`
   position: absolute;
@@ -18,24 +18,40 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
-  mix-blend-mode: color;
 `
 
-const Name = styled(TextBase)`
-  font-size: 3rem;
+const Title = styled(GrafittiBase)`
+  font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 0;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+
+  @media screen and (max-width: 650px) {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+`
+
+const Name = styled(GrafittiBase)`
+  position: absolute;
+  top: 3%;
+  right: 4%;
+  font-size: 3rem;
+  transform: rotate(12deg);
+
+  @media screen and (max-width: 650px) {
+    font-size: 2.2rem;
+  }
 `
 
 export default function View(props) {
   return (
     <>
-      <Helmet title="View" />
+      <Helmet title="SASH" />
       <Background />
       <Container>
         <Countdown />
-        <Name>SASH</Name>
+        <Title>Not A Formula</Title>
+        <Name>Sash</Name>
       </Container>
     </>
   )
