@@ -5,6 +5,7 @@ import Helmet from "components/Helmet"
 import Background from "components/Background"
 import Countdown from "components/Countdown"
 import GrafittiBase from "components/Grafitti"
+import LinksBase from "components/Links"
 
 const Container = styled.div`
   position: absolute;
@@ -31,16 +32,11 @@ const Title = styled(GrafittiBase)`
   }
 `
 
-const Name = styled(GrafittiBase)`
+const Links = styled(LinksBase)`
   position: absolute;
-  top: 3%;
-  right: 4%;
-  font-size: 3rem;
-  transform: rotate(12deg);
-
-  @media screen and (max-width: 650px) {
-    font-size: 2.2rem;
-  }
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 `
 
 export default function View(props) {
@@ -51,7 +47,10 @@ export default function View(props) {
       <Container>
         <Countdown />
         <Title>Not A Formula</Title>
-        <Name>Sash</Name>
+        <br />
+        <br />
+        <br />
+        <Links />
       </Container>
     </>
   )
