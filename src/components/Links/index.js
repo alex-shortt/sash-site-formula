@@ -19,7 +19,7 @@ const Text = styled(GraffitiBase)`
 `
 
 const A = styled.a`
-  margin: 0 1.5rem;
+  margin: 0 1.4rem;
   text-decoration: none !important;
   transition: opacity 0.15s linear;
 
@@ -28,16 +28,20 @@ const A = styled.a`
   }
 
   @media screen and (max-width: 650px) {
-    margin: 0 1.4rem;
+    margin: 0.3rem 0;
   }
 `
 
 const Container = styled.div`
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 95%;
   max-width: 650px;
   justify-content: space-between;
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+  }
 `
 
 const Image = styled.img`
