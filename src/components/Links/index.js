@@ -14,7 +14,7 @@ const Text = styled(GraffitiBase)`
   text-align: center;
 
   @media screen and (max-width: 650px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 `
 

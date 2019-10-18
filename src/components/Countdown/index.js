@@ -11,7 +11,7 @@ const Grafitti = styled(GrafittiBase)`
   text-align: center;
 
   @media screen and (max-width: 650px) {
-    font-size: 4.3rem;
+    font-size: 5rem;
   }
 `
 

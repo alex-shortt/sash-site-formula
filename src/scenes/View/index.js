@@ -27,8 +27,8 @@ const Title = styled(GrafittiBase)`
   margin-top: 2.5rem;
 
   @media screen and (max-width: 650px) {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
+    font-size: 1.7rem;
+    margin-top: 1.7rem;
   }
 `
 
@@ -37,6 +37,14 @@ const Links = styled(LinksBase)`
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
+
+  @media screen and (max-width: 650px) {
+    position: relative;
+    bottom: inherit;
+    left: inherit;
+    transform: none;
+    margin-top: 12vh;
+  }
 `
 
 export default function View(props) {
