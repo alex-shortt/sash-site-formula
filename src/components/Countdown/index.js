@@ -36,7 +36,7 @@ export default function Countdown(props) {
     if (days > 1) {
       timeString = `${days} days`
     } else {
-      timeString = `${days} days, ${hours} hours, ${minutes} minutes,  ${seconds}`
+      timeString = `${hours} : ${minutes} : ${seconds}`
     }
 
     setTimeLeft(timeString)
