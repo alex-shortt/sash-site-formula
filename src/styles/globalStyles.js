@@ -5,11 +5,15 @@ import "normalize.css"
 import "./fontawesome"
 
 import SprayLetters from "assets/fonts/SprayLetters.otf"
+import SprayLettersWoff from "assets/fonts/sprayletters-webfont.woff"
+import SprayLettersWoff2 from "assets/fonts/sprayletters-webfont.woff2"
 
 export default createGlobalStyle`
   @font-face {
     font-family: "Spray";
-    src: url(${SprayLetters});  
+     src: url(${SprayLettersWoff2}) format('woff2'),
+         url(${SprayLettersWoff}) format('woff'),
+         url(${SprayLetters}) format('otf');
   }
 
   body {
