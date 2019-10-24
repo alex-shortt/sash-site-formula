@@ -23,12 +23,15 @@ const Text = styled.p`
 const InputGroup = styled.form`
   display: flex;
   justify-content: center;
-  max-width: 500px;
+  max-width: 350px;
+  width: 100%;
   margin: 0 auto;
   flex-wrap: wrap;
 `
 
 const Input = styled.input.attrs({ type: "text" })`
+  font-family: verveine, sans-serif;
+  font-size: 1.5rem;
   border: none;
   flex: 1;
   box-sizing: content-box;
@@ -37,7 +40,6 @@ const Input = styled.input.attrs({ type: "text" })`
   padding: 0.2rem 0.5rem;
   line-height: 0.7em;
   outline: none;
-  font-size: 1rem;
 `
 
 const Button = styled.button`
