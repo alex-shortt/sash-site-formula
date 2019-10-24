@@ -5,6 +5,8 @@ import Helmet from "components/Helmet"
 import Background from "components/Background"
 import Contact from "components/Contact"
 import EP from "components/EP"
+import Videos from "components/Videos"
+import Shop from "components/Shop"
 
 const Container = styled.div`
   position: absolute;
@@ -13,12 +15,28 @@ const Container = styled.div`
   z-index: 2;
   width: 100%;
   height: 100%;
+
+  @media screen and (max-width: 800px) {
+    height: auto;
+    overflow-y: auto;
+  }
 `
 
-const TopRow = styled.div`
+const Row = styled.div`
   width: 100%;
   height: 50%;
   display: flex;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+
+    & > div {
+      margin: 2rem 0;
+      width: 100%;
+    }
+  }
 `
 
 export default function Main(props) {
@@ -27,10 +45,14 @@ export default function Main(props) {
       <Helmet title="Sash" />
       <Background />
       <Container>
-        <TopRow>
+        <Row>
           <EP />
           <Contact />
-        </TopRow>
+        </Row>
+        <Row>
+          <Videos />
+          <Shop />
+        </Row>
       </Container>
     </>
   )

@@ -14,6 +14,12 @@ const Container = styled.div`
   align-items: center;
 `
 
+const Title = styled.p`
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+`
+
 const Cover = styled.img.attrs({ src: epCoverArt })`
   width: 50%;
   max-width: 300px;
@@ -61,6 +67,7 @@ function LinkGroup(props) {
 export default function EP(props) {
   return (
     <Container>
+      <Title>Not a Formula EP</Title>
       <Cover />
       <Text>Now Streaming on All Platforms</Text>
       <Links>
