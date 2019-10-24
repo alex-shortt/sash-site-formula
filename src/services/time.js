@@ -19,7 +19,7 @@ export function useTimeToLaunch() {
       if (counter) {
         setCounter(counter + 1)
       }
-    }, 1000)
+    }, 300)
   }, [counter])
 
   if (!duration) {
