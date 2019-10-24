@@ -3,6 +3,7 @@ import styled from "styled-components/macro"
 
 import Helmet from "components/Helmet"
 import Background from "components/Background"
+import EP from "components/EP"
 
 const Container = styled.div`
   position: absolute;
@@ -19,7 +20,7 @@ export default function Main(props) {
       <Helmet title="Sash" />
       <Background />
       <Container>
-        <h1>hello</h1>
+        <EP />
       </Container>
     </>
   )
