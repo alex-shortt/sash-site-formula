@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components/macro"
 
-import GraffitiBase from "components/Grafitti"
+import GraffitiBase from "components/Graffiti"
 import spotifyImg from "assets/images/spotify.png"
 import appleImg from "assets/images/apple.png"
 import youtubeImg from "assets/images/youtube.png"

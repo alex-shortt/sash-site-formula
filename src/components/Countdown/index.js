@@ -3,7 +3,7 @@ import styled from "styled-components/macro"
 import moment from "moment"
 import "moment-timezone"
 
-import GrafittiBase from "components/Grafitti"
+import GrafittiBase from "components/Graffiti"
 
 const Grafitti = styled(GrafittiBase)`
   font-size: 9rem;

@@ -10,7 +10,7 @@ const Text = styled.p`
   margin: 0;
 `
 
-export default function Grafitti(props) {
+export default function Graffiti(props) {
   const { hue = 57, font, children, ...restProps } = props
 
   return (

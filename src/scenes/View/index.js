@@ -4,7 +4,7 @@ import styled from "styled-components/macro"
 import Helmet from "components/Helmet"
 import Background from "components/Background"
 import Countdown from "components/Countdown"
-import GrafittiBase from "components/Grafitti"
+import GraffitiBase from "components/Graffiti"
 import LinksBase from "components/Links"
 
 const Container = styled.div`
@@ -21,7 +21,7 @@ const Container = styled.div`
   color: white;
 `
 
-const Title = styled(GrafittiBase)`
+const Title = styled(GraffitiBase)`
   font-size: 2.5rem;
   text-align: center;
   margin-top: 2.5rem;
