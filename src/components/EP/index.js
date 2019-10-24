@@ -4,21 +4,8 @@ import styled from "styled-components/macro"
 import epCoverArt from "assets/images/ep-cover-art.png"
 import appleMusic from "assets/images/apple.png"
 import spotify from "assets/images/spotify.png"
-
-const Container = styled.div`
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-const Title = styled.p`
-  font-size: 2rem;
-  text-align: center;
-  margin: 1rem 0;
-`
+import placeholderImg from "assets/images/ep-poster-placeholder.png"
+import { Title, Text, Container, LinkGroup } from "components/Common"
 
 const Cover = styled.img.attrs({ src: epCoverArt })`
   width: 50%;
@@ -26,45 +13,24 @@ const Cover = styled.img.attrs({ src: epCoverArt })`
   height: auto;
 `
 
-const Text = styled.p`
-  font-size: 1em;
-`
-
 const Links = styled.div`
   display: flex;
 `
 
-const Link = styled.a`
-  font-size: 0.9em;
-  margin: 0 1em;
-  text-decoration: none;
-  cursor: pointer;
-  transition: opacity 0.15s linear;
-  color: black !important;
-
-  &:hover {
-    opacity: 0.7;
-  }
-`
-
-const Logo = styled.img`
-  height: 2em;
+const Placeholder = styled.img.attrs({ src: placeholderImg })`
+  max-width: 90%;
+  max-height: 90%;
+  height: 100%;
   width: auto;
-  vertical-align: middle;
 `
-
-function LinkGroup(props) {
-  const { img, text, href } = props
-
-  return (
-    <Link href={href} target="_blank">
-      <Logo src={img} />
-      {text}
-    </Link>
-  )
-}
 
 export default function EP(props) {
+  return (
+    <Container>
+      <Placeholder src={placeholderImg} />
+    </Container>
+  )
+
   return (
     <Container>
       <Title>Not a Formula EP</Title>

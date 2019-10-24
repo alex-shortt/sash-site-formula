@@ -1,24 +1,7 @@
 import React, { useState, useCallback } from "react"
 import styled from "styled-components/macro"
 
-const Container = styled.div`
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-const Title = styled.p`
-  font-size: 2rem;
-  text-align: center;
-  margin: 1rem 0;
-`
-
-const Text = styled.p`
-  font-size: 1em;
-`
+import { Title, Text, Container } from "components/Common"
 
 const InputGroup = styled.form`
   display: flex;
@@ -27,6 +10,8 @@ const InputGroup = styled.form`
   width: 100%;
   margin: 0 auto;
   flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0 20px;
 `
 
 const Input = styled.input.attrs({ type: "text" })`

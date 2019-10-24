@@ -4,35 +4,7 @@ import styled from "styled-components/macro"
 import instagramLogo from "assets/images/instagram.png"
 import twitterLogo from "assets/images/twitter.png"
 import mailLogo from "assets/images/mail.png"
-
-const Container = styled.div`
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-const Title = styled.p`
-  font-size: 2rem;
-  text-align: center;
-  margin: 1rem 0;
-`
-
-const Link = styled.a`
-  font-size: 1.5rem;
-  color: black !important;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.15s linear;
-
-  &:hover {
-    opacity: 0.7;
-  }
-`
+import { Title, Container, Link } from "components/Common"
 
 const Logo = styled.img`
   height: 2.5rem;
@@ -42,9 +14,10 @@ const Logo = styled.img`
 
 const At = styled(Link).attrs({ as: "span" })`
   font-family: fantasy;
-  font-size: 2.6rem;
+  font-size: 1.9rem;
   line-height: 60%;
   align-self: flex-end;
+  margin: 0;
 `
 
 function SocialLink(props) {

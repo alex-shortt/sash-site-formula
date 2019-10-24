@@ -1,20 +1,7 @@
 import React from "react"
 import styled from "styled-components/macro"
 
-const Container = styled.div`
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-const Title = styled.p`
-  font-size: 2rem;
-  text-align: center;
-  margin: 1rem 0;
-`
+import { Title, Container } from "components/Common"
 
 const Video = styled.iframe.attrs({
   frameBorder: 0,
