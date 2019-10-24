@@ -3,6 +3,7 @@ import styled from "styled-components/macro"
 
 import Helmet from "components/Helmet"
 import Background from "components/Background"
+import Contact from "components/Contact"
 import EP from "components/EP"
 
 const Container = styled.div`
@@ -14,13 +15,22 @@ const Container = styled.div`
   height: 100%;
 `
 
+const TopRow = styled.div`
+  width: 100%;
+  height: 50%;
+  display: flex;
+`
+
 export default function Main(props) {
   return (
     <>
       <Helmet title="Sash" />
       <Background />
       <Container>
-        <EP />
+        <TopRow>
+          <EP />
+          <Contact />
+        </TopRow>
       </Container>
     </>
   )
