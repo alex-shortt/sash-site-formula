@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import styled from "styled-components/macro"
-import moment from "moment"
-import "moment-timezone"
 
 import GrafittiBase from "components/Graffiti"
+import { useTimeToLaunch } from "services/time"
 
 const Grafitti = styled(GrafittiBase)`
   font-size: 9rem;
@@ -15,38 +14,21 @@ const Grafitti = styled(GrafittiBase)`
   }
 `
 
-const localLaunchDate = moment
-  .tz("2019-10-28 00:00", "America/New_York")
-  .tz(moment.tz.guess())
-
 export default function Countdown(props) {
-  const [timeLeft, setTimeLeft] = useState()
-  const [counter, setCounter] = useState(0)
+  const { timeDuration } = useTimeToLaunch()
 
-  useEffect(() => {
-    const diff = localLaunchDate.diff(moment())
-
-    const duration = moment.duration(diff)
-    const days = duration.days()
-    const hours = duration.hours()
-    const minutes = duration.minutes()
-    const seconds = duration.seconds()
-
-    let timeString
-    if (days > 1) {
-      timeString = `${days} days`
-    } else {
-      timeString = `${hours} : ${minutes} : ${seconds}`
-    }
-
-    setTimeLeft(timeString)
-
-    setTimeout(() => setCounter(counter + 1), 1000)
-  }, [counter])
-
-  if (!timeLeft) {
+  if (!timeDuration) {
     return <></>
   }
 
-  return <Grafitti>{timeLeft}</Grafitti>
+  const { days, hours, minutes, seconds } = timeDuration
+
+  let timeString
+  if (days > 1) {
+    timeString = `${days} days`
+  } else {
+    timeString = `${hours} : ${minutes} : ${seconds}`
+  }
+
+  return <Grafitti>{timeString}</Grafitti>
 }
