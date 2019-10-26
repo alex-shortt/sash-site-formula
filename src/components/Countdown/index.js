@@ -14,6 +14,10 @@ const Grafitti = styled(GrafittiBase)`
   }
 `
 
+const Colon = styled.span`
+  font-family: fantasy;
+`
+
 export default function Countdown(props) {
   const { timeDuration } = useTimeToLaunch()
 
@@ -25,9 +29,17 @@ export default function Countdown(props) {
 
   let timeString
   if (days > 1) {
-    timeString = `${days} days`
+    timeString = `${days} day${days !== 1 ? "s" : ""}`
   } else {
-    timeString = `${hours} : ${minutes} : ${seconds}`
+    timeString = (
+      <>
+        {hours}
+        <Colon> : </Colon>
+        {minutes}
+        <Colon> : </Colon>
+        {seconds}
+      </>
+    )
   }
 
   return <Grafitti>{timeString}</Grafitti>

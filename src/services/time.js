@@ -3,7 +3,7 @@ import moment from "moment"
 import "moment-timezone"
 
 const localLaunchDate = moment
-  .tz("2019-10-28 00:00", "America/New_York")
+  .tz("2019-10-28 24:00", "America/New_York")
   .tz(moment.tz.guess())
 
 export function useTimeToLaunch() {
