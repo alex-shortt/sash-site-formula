@@ -5,12 +5,12 @@ import GrafittiBase from "components/Graffiti"
 import { useTimeToLaunch } from "services/time"
 
 const Grafitti = styled(GrafittiBase)`
-  font-size: 9rem;
+  font-size: 8rem;
   font-weight: 100;
   text-align: center;
 
   @media screen and (max-width: 650px) {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 `
 

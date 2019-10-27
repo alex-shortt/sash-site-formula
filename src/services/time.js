@@ -16,9 +16,7 @@ export function useTimeToLaunch() {
     setDuration(locDuration)
 
     setTimeout(() => {
-      if (counter) {
-        setCounter(counter + 1)
-      }
+      setCounter(counter + 1)
     }, 300)
   }, [counter])
 
