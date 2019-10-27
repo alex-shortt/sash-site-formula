@@ -11,7 +11,7 @@ export default function View(props) {
     return <></>
   }
 
-  if (asSeconds < 0) {
+  if (asSeconds > 0) {
     return <Coming />
   }
 
