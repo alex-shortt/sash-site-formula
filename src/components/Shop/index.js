@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react"
 import styled from "styled-components/macro"
 
 import posterImage from "assets/images/signup-poster.png"
-import { Title, Text, Container } from "components/Common"
+import { Title, Container } from "components/Common"
 
 const Input = styled.input.attrs({ type: "text" })`
   font-family: verveine, sans-serif;
@@ -15,6 +15,7 @@ const Input = styled.input.attrs({ type: "text" })`
   padding: 0.2rem 0.5rem;
   line-height: 0.7em;
   outline: none;
+  min-width: 0;
 `
 
 const Button = styled.button`

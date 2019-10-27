@@ -32,7 +32,7 @@ const Tickets = styled.div`
   @media screen and (max-width: 800px) {
     height: 20vw;
     width: 90%;
-    transform: translateY(-13px);
+    transform: translateY(calc(-8px - 0.5vw));
   }
 `
 

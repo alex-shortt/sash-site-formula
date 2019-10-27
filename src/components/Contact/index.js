@@ -4,7 +4,7 @@ import styled from "styled-components/macro"
 import instagramLogo from "assets/images/instagram.png"
 import twitterLogo from "assets/images/twitter.png"
 import mailLogo from "assets/images/mail.png"
-import { Title, Container, Link } from "components/Common"
+import { Container, Link } from "components/Common"
 
 const Logo = styled.img`
   height: 2.5rem;
