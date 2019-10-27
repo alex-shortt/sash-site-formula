@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components/macro"
-import "typeface-roboto"
 import "normalize.css"
 
 import "./fontawesome"
