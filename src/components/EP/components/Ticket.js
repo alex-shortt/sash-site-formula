@@ -80,9 +80,14 @@ const Text = styled.p`
 
 const Icon = styled.img`
   width: auto;
-  height: 1.1em;
+  height: 1.2em;
   object-fit: contain;
   transform: rotate(90deg);
+
+  @media screen and (max-width: 500px) {
+    transform: rotate(180deg);
+    height: 1.3em;
+  }
 `
 
 const Anchor = styled.a`

@@ -3,6 +3,8 @@ import styled from "styled-components/macro"
 
 import appleMusic from "assets/images/apple.png"
 import spotify from "assets/images/spotify.png"
+import tidal from "assets/images/tidal.png"
+import amazon from "assets/images/amazon.png"
 import posterImg from "assets/images/ep-poster.png"
 import { Container } from "components/Common"
 
@@ -25,13 +27,16 @@ const Wrapper = styled.div`
 const Tickets = styled.div`
   display: inline-block;
   position: relative;
-  width: 100%;
+  width: 90%;
+
   height: 20%;
   transform: translateY(-1.5vh);
 
   @media screen and (max-width: 800px) {
-    height: 20vw;
-    width: 90%;
+    max-height: 130px;
+    height: 26vw;
+    width: 80%;
+
     transform: translateY(calc(-8px - 0.5vw));
   }
 `
@@ -55,15 +60,27 @@ export default function EP(props) {
         <Poster />
         <Tickets>
           <Ticket
-            left="20%"
+            left="10%"
             text="apple"
             icon={appleMusic}
             href="https://music.apple.com/us/artist/sash/569206310"
           />
           <Ticket
-            left="50%"
+            left="40%"
             text="spotify"
             icon={spotify}
+            href="https://music.apple.com/us/artist/sash/569206310"
+          />
+          <Ticket
+            left="65%"
+            text="amazon"
+            icon={amazon}
+            href="https://music.apple.com/us/artist/sash/569206310"
+          />
+          <Ticket
+            left="90%"
+            text="tidal"
+            icon={tidal}
             href="https://music.apple.com/us/artist/sash/569206310"
           />
         </Tickets>

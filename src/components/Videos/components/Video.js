@@ -5,15 +5,13 @@ import overlay1 from "assets/images/video-overlay-1.png"
 import overlay2 from "assets/images/video-overlay-2.png"
 
 const Container = styled.div`
-  width: 24vw;
+  width: 70vw;
+  height: 50vw;
   max-width: 300px;
-  height: 14vw;
   max-height: 180px;
   position: relative;
 
   @media screen and (max-width: 800px) {
-    width: 70vw;
-    height: 50vw;
   }
 `
 
