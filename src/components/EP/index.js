@@ -44,6 +44,12 @@ export default function EP(props) {
             icon={appleMusic}
             href="https://music.apple.com/us/artist/sash/569206310"
           />
+          <Ticket
+            left="50%"
+            text="spotify"
+            icon={spotify}
+            href="https://music.apple.com/us/artist/sash/569206310"
+          />
         </Tickets>
       </Wrapper>
     </Container>
