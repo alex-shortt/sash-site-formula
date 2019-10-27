@@ -3,22 +3,27 @@ import styled from "styled-components/macro"
 
 import { Title, Container } from "components/Common"
 
-const Video = styled.iframe.attrs({
-  frameBorder: 0,
-  allow:
-    "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-  allowFullscreen: true
-})`
-  width: 90%;
-  max-width: 250px;
-  height: 150px;
+import VideoBase from "./components/Video"
+
+const Video1 = styled(VideoBase)`
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  transform: translateX(-50%) rotate(3deg);
+`
+
+const Video2 = styled(VideoBase)`
+  position: absolute;
+  bottom: 20%;
+  right: 40%;
+  transform: translateX(50%) rotate(-3deg);
 `
 
 export default function Videos(props) {
   return (
     <Container>
-      <Title>Videos</Title>
-      <Video src="https://www.youtube.com/embed/7cLrN68DEHU" />
+      <Video1 src="https://www.youtube.com/embed/7cLrN68DEHU" />
+      <Video2 src="https://www.youtube.com/embed/IxGvm6btP1A" />
     </Container>
   )
 }

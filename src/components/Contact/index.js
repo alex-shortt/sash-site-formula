@@ -57,7 +57,6 @@ function MailText() {
 export default function Contact(props) {
   return (
     <Container>
-      <Title>Contact</Title>
       <SocialLink
         img={instagramLogo}
         text={InstagramText}
