@@ -22,7 +22,7 @@ export const Container = styled.div`
 `
 
 export const Link = styled.a`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0 1rem;
   text-decoration: none;
   cursor: pointer;

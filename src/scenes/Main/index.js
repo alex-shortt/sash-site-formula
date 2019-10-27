@@ -19,7 +19,7 @@ const Container = styled.div`
   box-sizing: border-box;
 
   @media screen and (max-width: 800px) {
-    padding: 2rem 0;
+    padding: 3rem 0;
     overflow-y: auto;
     text-align: center;
   }
@@ -27,7 +27,6 @@ const Container = styled.div`
 
 const Row = styled.div`
   width: 100%;
-  height: 50%;
   display: flex;
 
   @media screen and (max-width: 800px) {
@@ -38,6 +37,8 @@ const Row = styled.div`
     & > div {
       margin: 2rem 0;
       width: 100%;
+      box-sizing: border-box;
+      padding: 0 0.5rem;
     }
   }
 `
@@ -62,6 +63,18 @@ const Title = styled.img.attrs({ src: sprayLogo })`
   }
 `
 
+const TopRow = styled(Row)`
+  height: 60%;
+`
+
+const BotRow = styled(Row)`
+  height: 40%;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column-reverse;
+  }
+`
+
 export default function Main(props) {
   return (
     <>
@@ -69,14 +82,14 @@ export default function Main(props) {
       <Background />
       <Container>
         <Title />
-        <Row style={{ height: "60%" }}>
+        <TopRow>
           <EP />
           <Videos />
-        </Row>
-        <Row style={{ height: "40%" }}>
+        </TopRow>
+        <BotRow>
           <Contact />
           <Shop />
-        </Row>
+        </BotRow>
       </Container>
     </>
   )

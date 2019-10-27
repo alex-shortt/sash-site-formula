@@ -16,6 +16,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 800px) {
+    height: auto;
+  }
 `
 
 const Tickets = styled.div`
@@ -24,12 +28,24 @@ const Tickets = styled.div`
   width: 100%;
   height: 20%;
   transform: translateY(-1.5vh);
+
+  @media screen and (max-width: 800px) {
+    height: 20vw;
+    width: 90%;
+    transform: translateY(-13px);
+  }
 `
 
 const Poster = styled.img.attrs({ src: posterImg })`
   height: 70%;
   max-width: 100%;
   width: auto;
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
+    height: auto;
+    max-width: 500px;
+  }
 `
 
 export default function EP(props) {

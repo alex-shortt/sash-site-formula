@@ -6,7 +6,7 @@ import ticketImg from "assets/images/ep-ticket.png"
 const Container = styled.div`
   height: 100%;
   width: auto;
-  position: relative;
+  position: absolute;
   display: inline-block;
   transform: translateX(-50%) rotateX(1deg);
   transform-origin: top center;
@@ -90,6 +90,12 @@ const Anchor = styled.a`
   text-decoration: none;
 `
 
+const InnerText = styled.span`
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+`
+
 export default function Ticket(props) {
   const { text, left = "10%", icon, href } = props
 
@@ -99,7 +105,8 @@ export default function Ticket(props) {
         <Img />
         <Contents>
           <Text>
-            {icon && <Icon src={icon} />} {text}
+            {icon && <Icon src={icon} />}
+            <InnerText> {text}</InnerText>
           </Text>
         </Contents>
       </Anchor>

@@ -10,6 +10,11 @@ const Container = styled.div`
   height: 14vw;
   max-height: 180px;
   position: relative;
+
+  @media screen and (max-width: 800px) {
+    width: 50vw;
+    height: 30vw;
+  }
 `
 
 const Overlay = styled.div`
