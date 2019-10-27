@@ -69,13 +69,13 @@ export default function Main(props) {
       <Background />
       <Container>
         <Title />
-        <Row>
+        <Row style={{ height: "60%" }}>
           <EP />
-          <Contact />
-        </Row>
-        <Row>
           <Videos />
+        </Row>
+        <Row style={{ height: "40%" }}>
           <Shop />
+          <Contact />
         </Row>
       </Container>
     </>
