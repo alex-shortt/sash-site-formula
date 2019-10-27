@@ -1,18 +1,8 @@
 import React, { useState, useCallback } from "react"
 import styled from "styled-components/macro"
 
+import posterImage from "assets/images/signup-poster.png"
 import { Title, Text, Container } from "components/Common"
-
-const InputGroup = styled.form`
-  display: flex;
-  justify-content: center;
-  max-width: 350px;
-  width: 100%;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  padding: 0 20px;
-`
 
 const Input = styled.input.attrs({ type: "text" })`
   font-family: verveine, sans-serif;
@@ -42,6 +32,37 @@ const Button = styled.button`
   }
 `
 
+const PosterWrapper = styled.div`
+  position: relative;
+`
+
+const Poster = styled.img.attrs({ src: posterImage })`
+  object-fit: contain;
+  object-position: center top;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+`
+
+const InputGroup = styled.form`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0 20px;
+`
+
 export default function Shop(props) {
   const [email, setEmail] = useState("")
 
@@ -59,11 +80,13 @@ export default function Shop(props) {
   return (
     <Container>
       <Title>Shop Coming Soon</Title>
-      <Text>Enter your email below to get notified</Text>
-      <InputGroup onSubmit={submitEmail}>
-        <Input onChange={e => setEmail(e.target.value)} value={email} />
-        <Button action="submit">Submit</Button>
-      </InputGroup>
+      <PosterWrapper>
+        <Poster />
+        <InputGroup onSubmit={submitEmail}>
+          <Input onChange={e => setEmail(e.target.value)} value={email} />
+          <Button action="submit">Submit</Button>
+        </InputGroup>
+      </PosterWrapper>
     </Container>
   )
 }

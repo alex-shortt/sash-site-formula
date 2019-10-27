@@ -74,8 +74,8 @@ export default function Main(props) {
           <Videos />
         </Row>
         <Row style={{ height: "40%" }}>
-          <Shop />
           <Contact />
+          <Shop />
         </Row>
       </Container>
     </>
