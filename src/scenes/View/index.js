@@ -11,9 +11,5 @@ export default function View(props) {
     return <></>
   }
 
-  if (asSeconds > 0) {
-    return <Coming />
-  }
-
   return <Main />
 }

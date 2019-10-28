@@ -16,6 +16,10 @@ export default createGlobalStyle`
          url(${SprayLettersWoff}) format('woff'),
          url(${SprayLetters}) format('otf');
   }
+  
+  body, html, #root {
+    height: 100%;
+  }
 
   body {
     font-family: Spray, Avenir, Lato, Roboto, sans-serif;

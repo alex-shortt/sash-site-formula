@@ -13,7 +13,7 @@ const Logo = styled.img`
 `
 
 const At = styled(Link).attrs({ as: "span" })`
-  font-family: fantasy;
+  font-family: monospace;
   font-size: 1.9rem;
   line-height: 60%;
   align-self: flex-end;
