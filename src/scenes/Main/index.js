@@ -8,6 +8,13 @@ import EP from "components/EP"
 import Videos from "components/Videos"
 import Shop from "components/Shop"
 import sprayLogo from "assets/images/sash-spray-logo.png"
+import ShopButtonBase from "components/ShopButton"
+
+const ShopButton = styled(ShopButtonBase)`
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+`
 
 const Container = styled.div`
   position: absolute;
@@ -84,6 +91,7 @@ export default function Main(props) {
         <Title />
         <TopRow>
           <EP />
+          <ShopButton />
           <Videos />
         </TopRow>
         <BotRow>

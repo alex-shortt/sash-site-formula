@@ -2,7 +2,14 @@ import React, { useState, useCallback } from "react"
 import styled from "styled-components/macro"
 
 import posterImage from "assets/images/signup-poster.png"
-import { Title, Container } from "components/Common"
+import { Container } from "components/Common"
+import ShopButtonBase from "components/ShopButton"
+
+const ShopButton = styled(ShopButtonBase)`
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`
 
 const Input = styled.input.attrs({ type: "text" })`
   font-family: verveine, sans-serif;
@@ -80,7 +87,7 @@ export default function Shop(props) {
   )
   return (
     <Container>
-      <Title>Shop Coming Soon</Title>
+      <ShopButton />
       <PosterWrapper>
         <Poster />
         <InputGroup onSubmit={submitEmail}>
